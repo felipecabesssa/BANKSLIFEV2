@@ -19,9 +19,9 @@ public class CategoriaService {
 		return categoriaRepo.findAll();
 	}
 	
-	public Optional<Categoria> achePorId(Integer id){
+	public Categoria achePorId(Integer id){
 		Optional<Categoria> obj = categoriaRepo.findById(id);
-		return obj;
+		return obj.get();
 	}
 	
 	public Categoria salva(Categoria categoria) {

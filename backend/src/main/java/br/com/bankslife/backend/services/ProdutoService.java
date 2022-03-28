@@ -19,9 +19,9 @@ public class ProdutoService {
 		return produtoRepo.findAll();
 	}
 	
-	public Optional<Produto> achePorId(Integer id){
+	public Produto achePorId(Integer id){
 		Optional<Produto> obj = produtoRepo.findById(id);
-		return obj;
+		return obj.get();
 	}
 	
 	public Produto salva(Produto produto) {
