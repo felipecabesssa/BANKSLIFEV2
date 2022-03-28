@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,15 +23,20 @@ public class Produto  implements Serializable{
 	private Integer estoque;
 	private Double preco;
 	
+	@ManyToOne
+	@JoinColumn(name = "categoriaid")
+	private Categoria categoria;
+	
 	public Produto() {
 	}
 
-	public Produto(Integer id, String nome, Integer estoque, Double preco) {
+	public Produto(Integer id, String nome, Integer estoque, Double preco, Categoria categoria) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.estoque = estoque;
 		this.preco = preco;
+		this.categoria = categoria;
 	}
 
 	public Integer getId() {
