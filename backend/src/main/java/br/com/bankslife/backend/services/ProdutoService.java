@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.bankslife.backend.entities.Produto;
+import br.com.bankslife.backend.exceptions.ResourceNaoEncontradoException;
 import br.com.bankslife.backend.repositories.ProdutoRepository;
 
 @Service
@@ -21,7 +22,7 @@ public class ProdutoService {
 	
 	public Produto achePorId(Integer id){
 		Optional<Produto> obj = produtoRepo.findById(id);
-		return obj.get();
+		return obj.orElseThrow( () -> new ResourceNaoEncontradoException(id) );
 	}
 	
 	public Produto salva(Produto produto) {
