@@ -7,10 +7,8 @@ import bootstrap from './bootstrap'
 
 import axios from 'axios'
 
-createApp(App)
-.use(store)
+createApp(App).use(store)
 .use(router)
 .use(bootstrap)
 .provide(axios)
 .mount('#app')
-
