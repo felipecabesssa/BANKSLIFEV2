@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "nome": "Shape Lehi",
+      "estoque": 10,
+      "preco": 200.0,
+      "categoria": {
+        "id": 3,
+        "nome": "Shapes"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Shape Fluido",
+      "estoque": 10,
+      "preco": 170.0,
+      "categoria": {
+        "id": 3,
+        "nome": "Shapes"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Roda Andre Will",
+      "estoque": 10,
+      "preco": 250.0,
+      "categoria": {
+        "id": 2,
+        "nome": "Rodas"
+      }
+    },
+    {
+      "id": 4,
+      "nome": "Lixa Fluido emborrachada",
+      "estoque": 10,
+      "preco": 70.0,
+      "categoria": {
+        "id": 2,
+        "nome": "Acessorios"
+      }
+    }
+  ]
